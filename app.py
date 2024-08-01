@@ -22,7 +22,7 @@ if scatter_button: # al hacer clic en el botón
     st.write('Creación de un gráfico de dispersión para el conjunto de datos de anuncios de venta de coches')
     
     # Crear un gráfico de dispersión
-    fig = px.scatter(car_data, x="odometer", y="price", color="blue", title="Odometer vs Price by Year")
+    fig = px.scatter(car_data, x="odometer", y="price", title="Odometer vs Price by Year")
 
     # Mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
@@ -39,5 +39,5 @@ if show_histogram:
 # Mostrar el gráfico de dispersión si se selecciona la casilla de verificación correspondiente
 if show_scatter:
     st.write('Creación de un gráfico de dispersión para el conjunto de datos de anuncios de venta de coches')
-    scatter_fig = px.scatter(car_data, x="odometer", y="price", color="blue", title="Odometer vs Price by Year")
+    scatter_fig = px.scatter(car_data, x="odometer", y="price", title="Odometer vs Price by Year")
     st.plotly_chart(scatter_fig, use_container_width=True)
